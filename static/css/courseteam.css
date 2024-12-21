@@ -1,0 +1,25 @@
+div#grid1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    text-align: left;
+    grid-gap: 10px;
+}
+
+div#grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    text-align: left;
+    overflow-x: auto;
+    white-space: nowrap;
+    grid-gap: 10px;
+}
+
+div.grid p {
+    padding: 20px;
+    margin: 5px;
+    background-color: #E2F4FE;
+    border-radius: 10px;
+    box-shadow: 5px 5px #011D4A;
+}

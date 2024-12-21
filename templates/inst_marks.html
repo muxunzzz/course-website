@@ -1,0 +1,33 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/marks.css') }}">
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Enter Marks</h2>
+            <hr><br>
+            <form action="/enter_marks" method="POST">
+                <div class="input">
+                    <label for="stud_id">Student ID</label>
+                    <input type="text" id="stud_id" name="stud_id"></input>
+                </div>
+
+                <div class="input">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title"></input>
+                </div>
+
+                <div class="input">
+                    <label for="score">Marks</label>
+                    <input type="text" id="score" name="score"></input>
+                </div>
+
+                <div class="input">
+                    <label for="full">Out of</label>
+                    <input type="text" id="full" name="full"></input>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

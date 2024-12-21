@@ -1,0 +1,92 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/lectures.css') }}">
+
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Lecture Schedule</h2>
+            <hr>
+            <p>Please print and bring these notes/worksheets to class.</p>
+            <div class="container">
+                <div class="block">
+                    <h3>Week 1: Introduction, Databases background</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w1l') }}" target="_blank">Power Point</a>
+                        <a href="{{ url_for('w1h') }}" target="_blank">Power Point Handout</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 3: Schema Diagrams, Relational Algebra</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w3l') }}" target="_blank">Power Point</a>
+                        <a href="{{ url_for('w3w') }}" target="_blank">Worksheet</a>
+                        <a href="{{ url_for('w3s') }}" target="_blank">Worksheet Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 4: SQL and MySQL</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w4l') }}" target="_blank">Power Point</a>
+                        <a href="{{ url_for('w4h') }}" target="_blank">Power Point Handout</a>
+                        <a href="{{ url_for('w4w') }}" target="_blank">Worksheet</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 5: MySQL Queries, Creating and Editing Tables</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w5l') }}" target="_blank">Power Point</a>
+                        <a href="{{ url_for('w5h') }}" target="_blank">Power Point Handout</a>
+                        <a href="{{ url_for('w5w') }}" target="_blank">Worksheet</a>
+                        <a href="{{ url_for('w5s') }}" target="_blank">Worksheet Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 6: MySQL Outer Joins, Views, NULL, string functions, HTML</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w6l') }}" target="_blank">Power Point</a>
+                        <a href="{{ url_for('w6w') }}" target="_blank">Worksheet</a>
+                        <a href="{{ url_for('w6s') }}" target="_blank">Worksheet Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 7: HTML, CSS</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w7l') }}" target="_blank">Power Point</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 8: PHP</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w8l') }}" target="_blank">Power Point</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 9: PHP and SQL</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w9l') }}" target="_blank">Power Point</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 10: JavaScript and jQuery</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w10l') }}" target="_blank">Power Point</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 11: jQuery, AJAX, JSON</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w11l') }}" target="_blank">Power Point</a>
+                        <a href="{{ url_for('w11h') }}" target="_blank">Power Point Handout</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 12: Last Year's final</h3>
+                    <div class="material">
+                        <a href="{{ url_for('w12') }}" target="_blank">W16 Final</a>
+                    </div>
+                    <p>Note that some questions have code missing because portions resemble your A3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

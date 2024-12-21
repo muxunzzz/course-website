@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block content %}
+    <div class="main-content">
+        {% with messages = get_flashed_messages(with_categories = True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == 'notice' %}
+                        <div class="notice">{{ message }}</div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div class="content">
+            <form action="/login" method = "POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+      
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+
+                {% with messages = get_flashed_messages(with_categories = True) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == 'error' %}
+                                <div class="error">{{ message }}</div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+      
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

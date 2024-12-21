@@ -1,0 +1,59 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/tests.css') }}">
+
+{% extends "template.html" %}
+{% block content %} 
+<div class="main-content">
+    <div class="content">
+    <h2>Midterm</h2>
+    <hr>
+    <p>There will be one midterm. The midterm will be 75min in length. You should go to either HW215 or HW216 depending
+        on your last name as shown here.</p>
+    <table>
+        <tr>
+        <th>Course</th>
+        <th>Date</th>
+        <th></th>
+        <th>Capacity</th>
+        <th>Room #</th>
+        <th>Last Name</th>
+        <th># of Students</th>
+        </tr>
+        <tr>
+        <td>CSCB20</td>
+        <td>Monday 13 February</td>
+        <td>1</td>
+        <td>50</td>
+        <td>HW 215</td>
+        <td>A - HE</td>
+        <td>48</td>
+        </tr>
+        <tr>
+        <td>A. Bretscher</td>
+        <td>@ 5:00 PM</td>
+        <td>2</td>
+        <td>110</td>
+        <td>HW 216</td>
+        <td>HO - Z</td>
+        <td>108</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>160</td>
+        <td></td>
+        <td>TOTAL</td>
+        <td>156</td>
+        </tr>
+    </table>
+    <p>Preparing for the midterm: </p>
+    <ul>
+        <li>Understand all parts of A1.</li>
+        <li>The midterm will cover everything on databases that we did from the start until part way through the week 6
+        lecture.</li>
+    </ul>
+    <p>Once you have done some preparation, you can practice on a previous midterm: <a href="{{ url_for('midterm') }}"
+        target="_blank">Term Test</a></p>
+    </div>
+</div>
+{% endblock content %}

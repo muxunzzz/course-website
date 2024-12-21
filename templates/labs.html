@@ -1,0 +1,84 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/labs.css') }}">
+
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Tutorial Sections</h2>
+            <hr>
+            <p>Please go the tutorial section that you signed up for on ROSI.</p>
+        </div>
+        <div class="content">
+            <h2>Tutorial Exercises</h2>
+            <hr>
+            <p>This section contains the tutorial exercises.</p>
+            <p>Tutorials are held every week. The first tutorial week is week 2. Please make use of this valuable resource!</p>
+            <div class="container">
+                <div class="block">
+                    <h3>Week 2, Tutorial 1</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t1h') }}" target="_blank">Handout</a>
+                        <a href="" class="disabled">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 3, Tutorial 2</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t2h') }}" target="_blank">Handout</a>
+                        <a href="" class="disabled">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 4, Tutorial 3</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t3h') }}" target="_blank">Handout</a>
+                        <a href="{{ url_for('t3d') }}" target="_blank">SQL file</a>
+                        <a href="{{ url_for('t3s') }}" target="_blank">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 5, Tutorial 4</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t4h') }}" target="_blank">Handout</a>
+                        <a href="{{ url_for('t4s') }}" target="_blank">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 6, Tutorial 5</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t5h') }}" target="_blank">Handout</a>
+                        <a href="{{ url_for('t5s') }}" target="_blank">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 7, Tutorial 6</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t6h') }}" target="_blank">Handout</a>
+                        <a href="" class="disabled">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 8, Tutorial 7</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t7h') }}" target="_blank">Handout</a>
+                        <a href="" class="disabled">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 9, Tutorial 8</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t8h') }}" target="_blank">Handout</a>
+                        <a href="" class="disabled">Solution</a>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3>Week 10, Tutorial 9</h3>
+                    <div class="material">
+                        <a href="{{ url_for('t9h') }}" target="_blank">Handout</a>
+                        <a href="" class="disabled">Solution</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

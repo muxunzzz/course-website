@@ -1,0 +1,32 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/feedback.css') }}">
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Feedback</h2>
+            <hr><br>
+            <form action="/feedback" method="POST">
+                <label for="instructor">Instructor</label>
+                <select name="instructor" id="instructor">
+                    {% for instructor in instructors %}
+                        <option value="{{ instructor.id }}">{{ instructor.first_name }} {{ instructor.last_name }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="q1">What do you like about the instructor teaching?</label>
+                <textarea type="text" id="q1" name="q1" rows="4"></textarea>
+
+                <label for="q2">What do you recommend the instructor to do to improve their teaching?</label>
+                <textarea type="text" id="q2" name="q2" rows="4"></textarea>
+
+                <label for="q3">What do you like about the labs?</label>
+                <textarea type="text" id="q3" name="q3" rows="4"></textarea>
+
+                <label for="q4">What do you recommend the lab instructors to do to improve their lab teaching?</label>
+                <textarea type="text" id="q4" name="q4" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

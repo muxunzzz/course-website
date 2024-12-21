@@ -1,0 +1,19 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/profile.css') }}">
+
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>User detail</h2>
+            <hr>
+            <p><b>ID:</b> {{ user.id }}</p>
+            <p><b>Username:</b> {{ user.username }}</p>
+            <p><b>First Name:</b> {{ user.first_name }}</p>
+            <p><b>Last Name:</b> {{ user.last_name }}</p>
+            <p><b>Identity:</b> {{ user.type }}</p>
+            <div id="logout">
+                <a id="logout" href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

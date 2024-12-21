@@ -1,0 +1,31 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/grades.css') }}">
+
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Grades</h2>
+            <hr>
+            <div id="buttons">
+                <a href="{{ url_for('mark') }}">Enter Marks</a>
+                <a href="{{ url_for('regrade') }}">Regrade Requests</a>
+            </div>
+            <table>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Title</th>
+                    <th>Score</th>
+                </tr>
+                {% for grade, user in grades %}
+                    <tr>
+                        <td>{{ grade.stud_id }}</td>
+                        <td>{{ user.first_name }} {{ user.last_name }}</td>
+                        <td>{{ grade.title }}</td>
+                        <td>{{ grade.score }} / {{ grade.full }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock content %}

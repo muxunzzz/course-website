@@ -1,0 +1,59 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/assignments.css') }}">
+
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Overview</h2>
+            <hr>
+            <p>Here are the assignment and exercise topics, weights, and due dates. I will be posting the exercise and assignment handouts here. All exercises and assignments will be submitted on MarkUs.</p>
+        </div>
+        <div class="content">
+            <h2>Assignments</h2>
+            <hr>
+            <div class="container">
+                <div class="block">
+                    <h3>Assignment 1: Relational Algebra and MySQL</h3>
+                    <p><b>Weight: </b>15%</p>
+                    <div class="material">
+                        <a href="{{ url_for('a1h') }}" target="_blank">Handout</a>
+                        <a href="{{ url_for('a1s') }}" target="_blank">Solution Part 1</a>
+                    </div>
+                    <p><b>Due Date: </b></p>
+                    <p>Part 1. Wednesday Feb. 1, 11.59pm. Submit to <a href="https://markus2.utsc.utoronto.ca/courses/20/assignments">MarkUs</a></p>
+                    <p>Part 2 and 3. For 5% bonus Saturday Feb. 11, 11.59pm or Friday Feb. 17, 11.59. Submit to <a href="https://markus2.utsc.utoronto.ca/courses/20/assignments">MarkUs</a></p>
+                    <p>You can download a dumpfile for IMDB_SMALL <a href="{{ url_for('a1f') }}">here</a></p>
+                    <p>To use it type </p>
+                    <p id="command">mysql -u utorid -p < IMDB_SMALL.sql</p>
+                </div>
+                <div class="block">
+                    <h3>Assignment 2: HTML, CSS, PHP</h3>
+                    <p><b>Weight: </b>15%</p>
+                    <div class="material">
+                        <a href="{{ url_for('a2h') }}" target="_blank">Handout</a>
+                        <a href="{{ url_for('a2c') }}" target="_blank">Starter code</a>
+                    </div>
+                    <p><b>Due Date: </b></p>
+                    <p>Part 1: Worth 50% Friday March. 10, 11.59pm, Submit to <a href="https://markus2.utsc.utoronto.ca/courses/20/assignments">MarkUs</a></p>
+                    <p>Part 2: Worth 50% Friday March. 19, 11.59pm, Submit to <a href="https://markus2.utsc.utoronto.ca/courses/20/assignments">MarkUs</a></p>
+                </div>
+                <div class="block">
+                    <h3>Assignment 3: Web Application and Database</h3>
+                    <p><b>Weight: </b>15%</p>
+                    <div class="material">
+                        <a href="{{ url_for('a3ms') }}" target="_blank">Mark Scheme</a>
+                        <a href="{{ url_for('a3h') }}" target="_blank">Handout</a>
+                    </div>
+                    <p><b>Due Date: </b></p>
+                    <p>Friday March 31, 11.59pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>FAQ - Assignment 1</h2>
+            <hr>
+            <p>Q. If the mysql portion asks for a director or actor without specifying which attributes, what should I return?</p>
+            <p>A. Return the first name, last name.</p>
+        </div>
+    </div>
+{% endblock content %}

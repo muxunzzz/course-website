@@ -1,0 +1,37 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/grades.css') }}">
+
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Regrade Request</h2>
+            <hr>
+            <table>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Title</th>
+                    <th>Score</th>
+                    <th>Remark Requested</th>
+                    <th>Reasoning</th>
+                    <th></th>
+                </tr>
+                {% for grade, regrade in grades %}
+                    <tr>
+                        <form action="/regrade_request" method="POST">
+                            <input type="hidden" id="id" name="id" value="{{ grade.id }}"></input>
+                            <td>{{ grade.stud_id }}</td>
+                            <td>{{ grade.title }}</td>
+                            <td><input type="text" id="score" name="score" placeholder="{{ grade.score }}"> / {{ grade.full }}</input></td>
+                            <td><select name="regrade" id="regrade">
+                                <option value="True">Pending</option>
+                                <option value="False">Resolved</option>
+                            </select></td>
+                            <td>{{ regrade.reason }}</td>
+                            <td><button type="submit">Submit</button></td>
+                        </form>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock content %}

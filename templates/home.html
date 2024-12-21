@@ -1,0 +1,43 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content" id="intro"><p>{{ message }}</p></div>
+        <div class="content">
+            <h2>Course Description</h2>
+            <hr>
+            <p>A practical introduction to databases and Web app development. </p>
+            <div class="container">
+                <div class="block">
+                    <h3>Databases:</h3>
+                    <ul>
+                        <li>Terminology and applications</li>
+                        <li>Creating, querying and updating databases</li>
+                        <li>The entity-relationship model for database design</li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <h3>Web documents and applications:</h3>
+                    <ul>
+                        <li>Static and interactive documents</li>
+                        <li>Web servers and dynamic server-generated content</li>
+                        <li>Web application development and interface with databases</li>
+                    </ul>
+                </div>
+            </div>
+            <p><b>Prerequisite:</b> Some experience with programming in an imperative language such as Python, Java or C.</p>
+            <p><b>Exclusion:</b> This course may not be taken after - or concurrently with - any C- or D-level CSC course.</p>
+            <p>Syllabus <a href="{{ url_for('syllabus') }}" target="_blank">PDF</a></p>
+        </div>
+        <div class="content">
+            <h2>Instructor</h2>
+            <hr>
+            <p>Dr. Anna Bretscher</p>
+            <p><b>Email:</b> bretscher@utsc.utoronto.ca</p>
+            <p><b>Office:</b> IC493</p>
+            <p><b>Phone:</b> (416) 208-4745</p>
+            <p><b>Lectures:</b> Mondays 9:15-11:00 in HW 216</p>
+            <p><b>Office Hours:</b> W 11:00-12:00</p>
+        </div>
+    </div>
+{% endblock content %}

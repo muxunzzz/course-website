@@ -1,0 +1,20 @@
+div.block a{
+    background-color: #E2F4FE;
+    color: #2D3B45;
+}
+
+#command{
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+}
+
+@media only screen and (min-width: 1100px) {
+    div.container {
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+    div.block{
+        width: 80% !important;
+    }
+}

@@ -1,0 +1,47 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/resources.css') }}">
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Online Resources</h2>
+            <hr>
+            <div class="container">
+                <div class="block">
+                    <h3><a href="{{ url_for('home') }}">Course website</a></h3>
+                    <p>Course information, lecture notes, tutorial material, important announcements, etc. will be posted on the course website. It is your responsibility to visit it frequently.</p>
+                </div>
+                <div class="block">
+                    <h3><a href="https://piazza.com/utoronto.ca/winter2017/cscb20" target="_blank">Piazza</a></h3>
+                    <p>You are encouraged to use the bulletin board to discuss the course material, pose questions on the assignments, etc. The bulletin board will be monitored by the instructor and by your TAs. Please, be very careful not to reveal (parts of) your solution on the bulletin board.</p>
+                </div>
+                <div class="block">
+                    <h3><a href="https://markus2.utsc.utoronto.ca/courses/20/assignments" target="_blank">Markus</a></h3>
+                    <p>All assignments should be submitted to MarkUs.</p>
+                </div>
+                <div class="block">
+                    <h3><a href="https://code.tutsplus.com/sql-for-beginners--net-8200a" target="_blank">MySQL</a></h3>
+                    <p>Beginner tutorial for MySQL.</p>
+                </div>
+                <div class="block">
+                    <h3>Email communication</h3>
+                    <p>Questions regarding the course material, assignments, midterm, etc. should be posed on the bulletin board. Questions about the assignment which you feel you cannot formulate without revealing your solution (should be very rare!), as well as questions and concerns regarding your personal matters should be directed to the instructor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Software and documentation</h2>
+            <hr>
+            <div class="container">
+                <div class="block">
+                    <h3>Logging into Mathlab</h3>
+                    <ul>
+                        <li>Mac OS comes with the application "terminal". Simple click on it to run. Login to mathlab by typing: <br>
+                        <p id="command">ssh utorid@mathlab.utsc.utoronto.ca.</p>Enter your password. </li><br>
+                        <li>Windows - you will need a SSH client. PuTTY is a good free one. You can download and install here: <a href="https://www.putty.org/">PuTTY</a>. Use the same command as above to login to mathlab:<br>
+                        <p id="command">ssh utorid@mathlab.utsc.utoronto.ca.</p>Enter your password. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

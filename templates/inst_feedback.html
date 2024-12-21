@@ -1,0 +1,34 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/feedback.css') }}">
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Feedback</h2>
+            <hr><br>
+            <h3>What do you like about the instructor teaching?</h3>
+            <ul class="feedback">
+                {% for f in feedback %}
+                    <li>{{ f.q1 }}</li>
+                {% endfor %}
+            </ul>
+            <h3>What do you recommend the instructor to do to improve their teaching?</h3>
+            <ul class="feedback">
+                {% for f in feedback %}
+                    <li>{{ f.q2 }}</li>
+                {% endfor %}
+            </ul>
+            <h3>What do you like about the labs?</h3>
+            <ul class="feedback">
+                {% for f in feedback %}
+                    <li>{{ f.q3 }}</li>
+                {% endfor %}
+            </ul>
+            <h3>What do you recommend the lab instructors to do to improve their lab teaching?</h3>
+            <ul class="feedback">
+                {% for f in feedback %}
+                    <li>{{ f.q4 }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock content %}

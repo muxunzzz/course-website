@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ page_title }}</title>
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/template.css') }}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar">
+                <div id="top">
+                    <div id="menu"></div>
+                    <div id="course">CSCB20</div>
+                    <div id="current-page">{{ current_page_name }}</div>
+                    <div id="profile">
+                        <a href="{{ url_for('profile') }}" id="avatar"><span class="material-icons">person</span></a>
+                    </div>
+                </div>
+                <label for="menu-button"></label>
+                <input type="checkbox" id="menu-button"/>
+                <ul id="dropdown">
+                    <li class="nav-item"><a href="{{ url_for('home') }}">Home</a></li>
+                    <li class="nav-item"><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                    <li class="nav-item"><a href="{{ url_for('news') }}">News</a></li>
+                    <li class="nav-item"><a href="{{ url_for('grades') }}">Grades</a></li>
+                    <li class="nav-item"><a href="{{ url_for('lectures') }}">Lectures</a></li>
+                    <li class="nav-item"><a href="{{ url_for('labs') }}">Labs</a></li>
+                    <li class="nav-item"><a href="{{ url_for('assignments') }}">Assignments</a></li>
+                    <li class="nav-item"><a href="{{ url_for('tests') }}">Tests</a></li>
+                    <li class="nav-item"><a href="{{ url_for('resources') }}">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% block content %}
+        {% endblock content %}
+        <footer class="footer">
+            <p><a href="https://web.cs.toronto.edu/about/our-department" target="_blank">Faculty of Computer Science at UofT</a></p>
+            <p><a href="{{ url_for('feedback') }}">Anonymous Feedback</a></p>
+            <p><a href="{{ url_for('courseteam') }}">CourseTeam</a></p>
+            <p>Site designed by Muxun Zhang</p>
+        </footer>
+    </body>
+</html>

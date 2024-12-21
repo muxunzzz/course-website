@@ -1,0 +1,54 @@
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/courseteam.css') }}">
+{% extends "template.html" %}
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <h2>Course Team</h2>
+            <hr>
+            <p><b>Instructor: </b>Purva Gawde (Mon 9 to 11)</p>
+            <p><b>OH: </b>Tuesday 12 to 1</p><br>
+            <p><b>TA and OHs: </b></p><br>
+            <div class="grid" id="grid1">
+                <p>Joshua Concon</p>
+                <p>Wednesday 15:00-16:00</p>
+                <p>Pourya Moghadam</p>
+                <p>Monday (11:00 - 12:00) or (13:00 - 14:00)</p>
+                <p>Danny Chen</p>
+                <p>Friday 12:00 to 13:00</p>
+                <p>Nisha Rajendran</p>
+                <p>Wednesday 10.00am - 11.00am</p>
+                <p>Navinn Ravindaran</p>
+                <p>Friday 11 to 12</p>
+            </div>
+            <br>
+            <p><b>TAs and Tutorials: </b></p><br>
+            <div class="grid" id="grid2">
+                <p>TUT0001</p>
+                <p>MO</p>
+                <p>12:00</p>
+                <p>13:00</p>
+                <p>Pourya Moghadam</p>
+                <p>TUT0002</p>
+                <p>WE</p>
+                <p>11:00</p>
+                <p>12:00</p>
+                <p>Nisha Rajendran</p>
+                <p>TUT0003</p>
+                <p>WE</p>
+                <p>14:00</p>
+                <p>15:00</p>
+                <p>Joshua Concon</p>
+                <p>TUT0005</p>
+                <p>FR</p>
+                <p>10:00</p>
+                <p>11:00</p>
+                <p>Navinn Ravindaran</p>
+                <p>TUT0006</p>
+                <p>FR</p>
+                <p>13:00</p>
+                <p>14:00</p>
+                <p>Danny Chen</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

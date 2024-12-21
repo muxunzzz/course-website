@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="main-content">
+        <div class="content">
+            <form action="/register" method = "POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname">
+
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname">
+      
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirm" name="confirm">
+
+                <label for="identity">Identity</label>
+                <select name="identity" id="identity">
+                    <option value="student">Student</option>
+                    <option value="instructor">Instructor</option>
+                </select>
+
+                {% with messages = get_flashed_messages(with_categories = True) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == 'error' %}
+                                <div class="error">{{ message }}</div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+      
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
